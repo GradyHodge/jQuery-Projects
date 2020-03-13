@@ -13,7 +13,8 @@ header {
   border-bottom: 4px #000 solid;
   margin-bottom: 10px;
 }
-#container {
+#container,
+.container {
   width: 90%;
   margin: auto;
   padding: 10px;
