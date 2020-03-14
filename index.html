@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jQuery | Traversy</title>
 
+    <link rel="stylesheet" href="style.css" />
+
     <!-- CDN for jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>jQuery Advanced Applications</h1>
+      <h1>jQuery Selectors</h1>
     </header>
     <div id="container">
       <h1 id="heading1">Heading One</h1>
@@ -47,6 +48,56 @@
       <a href="https://google.com">Google</a>
       <a href="https://brave.com">Brave</a>
     </div>
+
+    <header>
+      <h1>jQuery Events</h1>
+    </header>
+    <div class="container">
+      <h3>Mouse Events</h3>
+      <button id="btn1">BUTTON1</button>
+      <button id="btn2">BUTTON2</button>
+
+      <!-- Show Hide Methods -->
+      <p class="para3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+        maxime ab ut vel ex corrupti sunt inventore. Odio dicta, molestiae in
+        provident obcaecati repellendus, unde nostrum iure tempora dolorem
+        similique.
+      </p>
+      <div>
+        <button id="btnShow">Show</button>
+        <button id="btnHide">Hide</button>
+      </div>
+
+      <!-- Toggle Show/Hide Method -->
+      <div>
+        <button id="btnToggle">Show / Hide</button>
+      </div>
+      <p class="para4">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+        maxime ab ut vel ex corrupti sunt inventore. Odio dicta, molestiae in
+        provident obcaecati repellendus, unde nostrum iure tempora dolorem
+        similique.
+      </p>
+    </div>
+    <h1 id="coords"></h1>
+
+    <hr />
+    <form action="" id="form">
+      <label for="">Name</label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="">Email</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <label for="">Gender</label>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
 
     <script src="main.js"></script>
   </body>
