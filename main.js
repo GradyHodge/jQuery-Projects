@@ -171,26 +171,57 @@ $(document).ready(function() {
   //below gets the mtDiv innerHTML and puts it in alert
   // alert($("#mtDiv").text());
 
-  $("ul").append("<li>Appended List Item 5</li>");
-  $("ul").prepend("<li>Prepended List Item 0</li>");
+  // $("ul").append("<li>Appended List Item 5</li>");
+  // $("ul").prepend("<li>Prepended List Item 0</li>");
 
-  $(".para5").appendTo("#para1");
-  $(".para6").prependTo(".para2");
+  // $(".para5").appendTo("#para1");
+  // $(".para6").prependTo(".para2");
 
   //append, appendTo, prepend, prependTo place elements inside their divs
   //before and after place them outside the target container
 
-  $("ul").before('<h4>element placed ".before" the UL container</h4>');
-  $("ul").after('<h4>element placed ".after" the UL container</h4>');
+  // $("ul").before('<h4>element placed ".before" the UL container</h4>');
+  // $("ul").after('<h4>element placed ".after" the UL container</h4>');
 
   //.empty() will remove all of the inner elements of a div
-  $("ul").empty();
+  // $("ul").empty();
   //.detach() will remove the whole element from the DOM
-  $("ul").detach();
+  // $("ul").detach();
 
   // can remove and add attributes into HTML tags
-  $("a").removeAttr("target", "blank");
-  $("a").attr("target", "_blank");
+  // $("a").removeAttr("target", "blank");
+  // $("a").attr("target", "_blank");
   //use .attr() to GET the attribute
-  alert($("a").attr("href"));
+  // alert($("a").attr("href"));
+
+  // wrap elements into other elements. This example wraps each p elements with an h1 tag
+  // $("p").wrap("<h1>");
+  //.wrapAll() method wraps a whole group of p elements together in one h2 wrapper
+  // $("p").wrapAll("<h2>");
+
+  // INPUT A NEW ITEM INTO THE  UNORDERED LIST
+  $("#newItem").keyup(function(e) {
+    var code = e.which; //e.which with grab the key codes for keyboard and the code for the enter button is 13
+
+    if (code == 13) {
+      e.preventDefault();
+      $("ul").append("<li>" + e.target.value + "</li>");
+    }
+  });
+
+  var myArr = ["Brad", "Kelly", "Nate", "Jose"];
+
+  //loop through an array using jQuery with $.each()
+  $.each(myArr, function(i, val) {
+    //console.log(val); //logs all items in array
+    $("#users").append("<li>" + val + "</li>");
+  });
+
+  //You can also put the list items into an array
+
+  var newArr = $("ul#list li").toArray();
+  // console.log(newArr);
+  $.each(newArr, function(i, val) {
+    // console.log(val.innerHTML); //get a list of list items
+  });
 });

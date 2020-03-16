@@ -8,9 +8,6 @@
     <title>jQuery | Traversy</title>
 
     <link rel="stylesheet" href="style.css" />
-
-    <!-- CDN for jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,6 +20,11 @@
         Beatae delectus hic dignissimos quidem aspernatur officiis perferendis
         ipsa eos cum, pariatur deserunt adipisci architecto tempora enim
         accusantium neque eligendi facilis! Dicta.
+      </p>
+      <p>with .wrap() this tag gets wrapped together with the other p.</p>
+      <p>
+        with .wrapAll() each element gets wrapped seperately in their own
+        wrapper
       </p>
       <h2 class="heading2">Heading Two</h2>
       <p class="para2">
@@ -109,7 +111,8 @@
       <p class="para5">This is paragraph 5</p>
       <p class="para6">This is paragraph 6</p>
       <div id="mtDiv">
-        <ul>
+        <input type="text" id="newItem" />
+        <ul id="list">
           <li>List Item 1</li>
           <li>List Item 2</li>
           <li>List Item 3</li>
@@ -117,8 +120,19 @@
         </ul>
 
         <a href="https://google.com">Google</a>
+
+        <h4>List of Users from Array</h4>
+        <ul id="users"></ul>
+        <h4>List of Items from UL</h4>
+        <ul id="listItems"></ul>
       </div>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
 
     <script src="main.js"></script>
   </body>
