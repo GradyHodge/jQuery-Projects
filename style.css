@@ -19,3 +19,9 @@ header {
   margin: auto;
   padding: 10px;
 }
+
+.mtClass {
+  color: white;
+  background: purple;
+  padding-left: 1rem;
+}

@@ -154,3 +154,43 @@ $(document).ready(function() {
     console.log("name: " + name);
   });
 });
+
+// jQuery DOM MANIPULATION
+
+$(document).ready(function() {
+  // $("p.para5").css("color", "red");
+  // $("p.para5").css({ color: "red", background: "#ccc" });
+  // $("p.para6").addClass("mtClass");
+  // $("p.para6").removeClass("mtClass");
+  // $("#btn3").click(function() {
+  // $("p.para6").toggleClass("mtClass");
+  //});
+
+  // $("#mtDiv").text("Hello World");
+  // $("#mtDiv").html("<h3>Howdy World</h3>");
+  //below gets the mtDiv innerHTML and puts it in alert
+  // alert($("#mtDiv").text());
+
+  $("ul").append("<li>Appended List Item 5</li>");
+  $("ul").prepend("<li>Prepended List Item 0</li>");
+
+  $(".para5").appendTo("#para1");
+  $(".para6").prependTo(".para2");
+
+  //append, appendTo, prepend, prependTo place elements inside their divs
+  //before and after place them outside the target container
+
+  $("ul").before('<h4>element placed ".before" the UL container</h4>');
+  $("ul").after('<h4>element placed ".after" the UL container</h4>');
+
+  //.empty() will remove all of the inner elements of a div
+  $("ul").empty();
+  //.detach() will remove the whole element from the DOM
+  $("ul").detach();
+
+  // can remove and add attributes into HTML tags
+  $("a").removeAttr("target", "blank");
+  $("a").attr("target", "_blank");
+  //use .attr() to GET the attribute
+  alert($("a").attr("href"));
+});

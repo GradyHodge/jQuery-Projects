@@ -7,8 +7,46 @@ script src="https://code.jquery.com/jquery-3.4.1.min.js">script
 2. jQuery selectors utilize CSS selectors and can also use html attributes.
 $('a[href="https://brave.com"]').css("color", "orange");
 
+.hide()
+.show()
+.css()
+.on()
+
+
 </pre>
 
 <!-- notes from traversy jQuery | EVENTS | https://www.youtube.com/watch?v=VlWsJHsVb-E  -->
 
-<pre></pre>
+<pre>
+  $(document).ready(function(){})
+  .toggle()
+  .dblclick()
+  .on("mouseenter", function() {
+  .on("mouseleave", function() {
+  $("#btnToggle").hover(function() { <!-- .hover combines both mouseenter and mouseleave methods-->
+  .on("mousemove", function() {
+  .on("mousedown", function() {
+  .on("mouseup", function() {
+
+    .click(function(e) {
+      //   alert(e.currentTarget.id);
+      //   alert(e.currentTarget.innerHTML);
+      //   alert(e.currentTarget.outerHTML);
+      //   alert(e.currentTarget.className);
+
+      $(document).on("mousemove", function(e) {
+        $("#coords").html("Coords: X: " + e.clientX + " Y: " + e.clientY);
+      });
+
+      .focus(function() {
+      .blur(function() {
+
+</pre>
+
+<!-- notes from traversy jQuery | DOM Manipulation | https://www.youtube.com/watch?v=q4FWSdX55ls&list=TLPQMTQwMzIwMjCg_h1fuuy_Sg&index=2 -->
+
+<pre>
+.addClass('myClass');
+.removeClass('myClass');
+
+</pre>
