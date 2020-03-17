@@ -25,3 +25,20 @@ header {
   background: purple;
   padding-left: 1rem;
 }
+
+#box {
+  background-color: #333;
+  color: #fff;
+  width: 500px;
+  height: 90px;
+  padding: 40px;
+  text-align: center;
+}
+
+#box2 {
+  background-color: red;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}

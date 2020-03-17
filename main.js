@@ -225,3 +225,87 @@ $(document).ready(function() {
     // console.log(val.innerHTML); //get a list of list items
   });
 });
+
+/////////////////////////////////////
+
+// EFFECTS AND ANIMATION
+
+////////////////////////////////////
+
+$(document).ready(function() {
+  $("#btnFadeOut").click(function() {
+    // $("#box").fadeOut("slow");
+    // $("#box").fadeOut("fast");
+    // $("#box").fadeOut(3000);
+    $("#box").fadeOut("fast", function() {
+      $("#btnFadeOut").text("She Gone");
+      $("#btnFadeIn").text("Fade In");
+    });
+  });
+  $("#btnFadeIn").click(function() {
+    $("#box").fadeIn("fast", function() {
+      $("#btnFadeIn").text("She Back!");
+      $("#btnFadeOut").text("Fade Out");
+    });
+  });
+
+  $("#btnFadeTog").click(function() {
+    $("#box").fadeToggle("fast", function() {});
+  });
+
+  //slide animations
+
+  $("#btnSlideDown").click(function() {
+    // $("#box").slideDown("slow");
+    // $("#box").slideDown("fast");
+    // $("#box").slideDown(3000);
+    $("#box").slideDown(3000, function() {});
+  });
+  $("#btnSlideUp").click(function() {
+    $("#box").slideUp(3000, function() {});
+  });
+
+  $("#btnSlideTog").click(function() {
+    $("#box").slideToggle(3000, function() {});
+  });
+  $("#btnStop").click(function() {
+    $("#box").stop();
+  });
+
+  // Move Around Box Left Right
+
+  $("#btnMoveRight").click(function() {
+    $("#box2").animate({
+      left: 500,
+      width: "10px",
+      height: "10px",
+      opacity: "0.5"
+    });
+  });
+  $("#btnMoveLeft").click(function() {
+    $("#box2").animate({
+      left: 0,
+      width: "100px",
+      height: "100px",
+      opacity: "100%"
+    });
+  });
+
+  $("#btnMoveAround").click(function() {
+    var box = $("#box2");
+    box.animate({
+      left: 300
+    });
+    box.animate({
+      top: 300
+    });
+    box.animate({
+      left: 0,
+      top: 300
+    });
+    box.animate({
+      left: 0,
+      top: 0
+    });
+  });
+});
